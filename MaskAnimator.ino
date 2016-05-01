@@ -26,17 +26,62 @@ void setup() {
   stripMiddle.begin();
   stripRight.begin();
   show();
+
+  //merged from Google Drive:
+    sad();
+  pause();
+  happy();
+  
+ 
+  anger();
+  shy();
+  for (int i= 0;i<1;i++){
+    randm();
+  }
+
+  showFrame(FRAME_CLEAR);
+  delay(6000);
+  disgust();
+  pause();
+
 }
 
 void loop() {
-
+/*
+ * merged from Google Drive: no loop
 fear();
 surprise();
-happiness();
+happy();
 sad();
 anger();
 shy();
 disgust();
+*/ 
+}
+
+void randm(){
+
+  showFrame(FRAME_CLEAR);
+  delay(4000);
+  showFrame(FRAME_Random0);
+  delay(100);
+  showFrame(FRAME_Random1);
+  delay(100);
+  showFrame(FRAME_Random2);
+  delay(100);
+  showFrame(FRAME_Random3);
+  delay(100);
+  showFrame(FRAME_Random4);
+  delay(100);
+  showFrame(FRAME_Random5);
+  delay(100);
+  showFrame(FRAME_Random6);
+  delay(100);
+  showFrame(FRAME_Random7);
+  delay(100);
+  showFrame(FRAME_Random8);
+  delay(100);
+
 
 }
 
@@ -124,7 +169,7 @@ void surprise()
   
 }
 
-void happiness()
+void happy()
 {
   for (int i = 0; i<9;i++){
     showFrame(FRAME_HAPPY1);
@@ -200,6 +245,53 @@ void disgust()
     showFrame(FRAME_DISGUST0);
     delay(24000);
 }
+
+
+void pause(){
+  showFrame(FRAME_CLEAR);
+  delay(1000);
+
+  showFrame(FRAME_PAUSE);
+  delay(8000);
+  showFrame(FRAME_CLEAR);
+  delay(200);
+}
+void verrasing(){
+  showFrame(FRAME_CLEAR);
+  delay(4000);
+  showFrame(FRAME_VERRASSING1);
+  delay(300);
+  showFrame(FRAME_VERRASSING2);
+  delay(300);
+  showFrame(FRAME_VERRASSING3);
+  delay(500);
+  showFrame(FRAME_VERRASSING4);
+  delay(500);
+  showFrame(FRAME_VERRASSING5);
+  delay(500);
+  showFrame(FRAME_VERRASSING6);
+  delay(500);
+  showFrame(FRAME_VERRASSING7);
+  delay(500);
+
+  showFrame(FRAME_VERRASSING1);
+  delay(300);
+  showFrame(FRAME_VERRASSING2);
+  delay(300);
+  showFrame(FRAME_VERRASSING3);
+  delay(500);
+  showFrame(FRAME_VERRASSING4);
+  delay(500);
+  showFrame(FRAME_VERRASSING5);
+  delay(500);
+  showFrame(FRAME_VERRASSING6);
+  delay(500);
+  showFrame(FRAME_VERRASSING7);
+  delay(4000);
+
+
+}
+
 
 uint32_t color(uint8_t r, uint8_t g, uint8_t b) {
   return ((uint32_t)r << 16) | ((uint32_t)g <<  8) | b;
