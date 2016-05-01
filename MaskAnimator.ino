@@ -31,11 +31,109 @@ void setup() {
 }
 
 void loop() {
-sad();
+
 fear();
+surprise();
+happiness();
+sad();
+anger();
+shy();
 disgust();
+
 }
 
+
+void fear()
+{
+    showFrame(FRAME_FEAR0);
+    delay(1200);
+    showFrame(FRAME_FEAR1);
+    delay(1200);
+    showFrame(FRAME_FEAR2);
+    delay(1200);
+    showFrame(FRAME_FEAR3);
+    delay(20400);
+}
+
+void surprise()
+{
+// five vertical lines
+// line1: 3, 7
+// line2: 1,2,5,8
+// line3: 9-14
+// line4: 15,16,19,22
+// line5: 17,21
+
+  //set the five colors for the five vertical lines
+  uint32_t color1 = color(0,0,255);
+  uint32_t color2 = color(0,255,255);
+  uint32_t color3 = color(255,255,0);
+  uint32_t color4 = color(255,0,255);
+  uint32_t color5 = color(0,0,255);
+
+  int colors[] = {color1, color2, color3, color4, color5};
+
+  int idx0 = 0;
+  int idx1 = 1;
+  int idx2 = 2;
+  int idx3 = 3;
+  int idx4 = 4;
+
+  //initial delay: 1 second. 
+  int speeddelay = 1000;
+
+  //clear als strips
+  stripLeft.clear();
+  stripMiddle.clear();
+  stripRight.clear();
+
+  //the animation is made out of 250 frames
+  for(int i=0; i<250; i++)
+  {
+    setPixelColor(3, colors[idx0]); 
+    setPixelColor(7, colors[idx0]);
+    setPixelColor(1, colors[idx1]); 
+    setPixelColor(2, colors[idx1]);
+    setPixelColor(5, colors[idx1]); 
+    setPixelColor(8, colors[idx1]);
+    setPixelColor(9, colors[idx2]); 
+    setPixelColor(10, colors[idx2]);
+    setPixelColor(11, colors[idx2]); 
+    setPixelColor(12, colors[idx2]);
+    setPixelColor(13, colors[idx2]);
+    setPixelColor(14, colors[idx2]);
+    setPixelColor(15, colors[idx3]); 
+    setPixelColor(16, colors[idx3]);
+    setPixelColor(19, colors[idx3]); 
+    setPixelColor(22, colors[idx3]);
+    setPixelColor(17, colors[idx4]); 
+    setPixelColor(21, colors[idx4]);
+    
+    idx0++;
+    idx1++;
+    idx2++;
+    idx3++;
+    idx4++;
+    idx0 = idx0 % 5;
+    idx1 = idx1 % 5;
+    idx2 = idx2 % 5;
+    idx3 = idx3 % 5;
+    idx4 = idx4 % 5;
+
+    stripLeft.show();
+    stripMiddle.show();
+    stripRight.show();
+
+    delay(speeddelay);
+    speeddelay -= 4;
+  }
+  
+}
+
+void happiness()
+{
+  
+}
 
 void sad()
 {
@@ -52,18 +150,15 @@ void sad()
   }
 }
 
-void fear()
+void anger()
 {
-    showFrame(FRAME_FEAR0);
-    delay(1200);
-    showFrame(FRAME_FEAR1);
-    delay(1200);
-    showFrame(FRAME_FEAR2);
-    delay(1200);
-    showFrame(FRAME_FEAR3);
-    delay(20400);
+  
 }
 
+void shy()
+{
+  
+}
 
 void disgust()
 {
@@ -74,6 +169,54 @@ void disgust()
 uint32_t color(uint8_t r, uint8_t g, uint8_t b) {
   return ((uint32_t)r << 16) | ((uint32_t)g <<  8) | b;
 }
+
+
+void setPixelColor(int index, int r, int g, int b)
+{
+  index = index -1;
+
+  #ifdef DEBUG_SINGLESTRIP
+  stripRight.setPixelColor(index,r,g,b  );
+  #else
+  
+  if(index >14)
+  {
+    stripRight.setPixelColor(index-14,r,g,b  );  
+  }
+  else if(index >8)
+  {
+    stripMiddle.setPixelColor(index-8, r,g,b );  
+  }
+  else
+  {
+    stripLeft.setPixelColor(index, r,g,b);
+  }
+  #endif  
+}
+
+void setPixelColor(int index, uint32_t rgb)
+{
+  index = index -1;
+  #ifdef DEBUG_SINGLESTRIP
+  stripRight.setPixelColor(index,rgb );
+  #else
+  
+  if(index >14)
+  {
+    stripRight.setPixelColor(index-14,rgb  );  
+  }
+  else if(index >8)
+  {
+    stripMiddle.setPixelColor(index-8, rgb );  
+  }
+  else
+  {
+    stripLeft.setPixelColor(index, rgb);
+  }
+  #endif
+  
+}
+
 
 void showFrame(const uint8_t frame[])
 {

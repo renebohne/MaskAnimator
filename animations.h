@@ -2,9 +2,20 @@
 // 9,10,11,12,13,14,x,x
 // 15,16,17,18,19,20,21,22
 
+/*
+ * fill scenes: neurons
+ * the video shows the seven emotions: 
+ * fear (thunder with sound)
+ * surprise (firework)
+ * happiness (sunrise)
+ * sadness (sunset)
+ * anger (abstract firework with explosion sounds)
+ * shy (face of a girl)
+ * disguist (kaleidoscope with vizuals and in the end it turns out to be a worm)
+ * 
+ */
 
-
-const uint8_t FEAR_EMPTY[] PROGMEM = 
+const uint8_t FRAME_EMPTY[] PROGMEM = 
 {
   0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
   0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
@@ -93,6 +104,50 @@ const uint8_t FRAME_DISGUST0[] PROGMEM =
   0,0,0, 0,0,0, 255,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
   255,0,0, 0,0,0, 0,0,0, 0,0,0, 255,0,0, 255,0,0, 255,0,0, 0,0,0
 };
+
+
+//// SURPRISE /////////////////////////////////////////////////////////////////////////////////////////////////////
+// five vertical lines
+// line1: 3, 7
+// line2: 1,2,5,8
+// line3: 9-14
+// line4: 15,16,19,22
+// line5: 17,21
+
+
+const uint8_t FRAME_SURPRISE0[] PROGMEM = 
+{
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+};
+
+
+const uint8_t FRAME_SURPRISE1[] PROGMEM = 
+{
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+};
+
+
+
+const uint8_t FRAME_SURPRISE2[] PROGMEM = 
+{
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+};
+
+
+
+const uint8_t FRAME_SURPRISE3[] PROGMEM = 
+{
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
+  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+};
+
 
 
 
