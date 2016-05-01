@@ -2,7 +2,7 @@
 #define _CONFIG_H
 
 
-#define DEBUG_SINGLESTRIP 1
+//#define DEBUG_SINGLESTRIP 1
 
 #define PIN_LEFT 3
 #define PIN_MIDDLE 5
