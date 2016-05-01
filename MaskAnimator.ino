@@ -132,7 +132,8 @@ void surprise()
 void happiness()
 {
   //sun
-  
+  setPixelColor(12, colors[idx2]);
+  sad
 }
 
 void sad()
@@ -152,7 +153,7 @@ void sad()
 
 void anger()
 {
-  
+ //flames 
 }
 
 void shy()
@@ -168,10 +169,14 @@ void shy()
      setPixelColor(20, i,0,0);
      setPixelColor(21, i,0,0);
      delay(5);
+     
+    stripLeft.show();
+    stripMiddle.show();
+    stripRight.show();
+
+     
   }
   delay(227300);
-
-  
 }
 
 void disgust()
