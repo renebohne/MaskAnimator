@@ -158,7 +158,21 @@ void sad()
 
 void anger()
 {
- //flames 
+ //original idea: flames 
+  for (int i= 0;i<15;i++){
+    showFrame(FRAME_ANGER);
+    delay(100);
+    showFrame(FRAME_ANGER0);
+    delay(100);
+    showFrame(FRAME_ANGER1);
+    delay(100);
+    showFrame(FRAME_ANGER2);
+    delay(100);
+    showFrame(FRAME_ANGER3);
+    delay(100);
+    showFrame(FRAME_ANGER4);
+    delay(100);
+  }
 }
 
 void shy()
