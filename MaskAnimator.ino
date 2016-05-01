@@ -42,7 +42,6 @@ disgust();
 
 }
 
-
 void fear()
 {
     showFrame(FRAME_FEAR0);
@@ -132,6 +131,7 @@ void surprise()
 
 void happiness()
 {
+  //sun
   
 }
 
@@ -157,6 +157,20 @@ void anger()
 
 void shy()
 {
+  //a red diagonal line per side
+  //5,6,7  and 19,20,21
+  for(int i=0;i<255;i++)
+  {
+     setPixelColor(5, i,0,0);
+     setPixelColor(6, i,0,0);
+     setPixelColor(7, i,0,0);
+     setPixelColor(19, i,0,0);
+     setPixelColor(20, i,0,0);
+     setPixelColor(21, i,0,0);
+     delay(5);
+  }
+  delay(227300);
+
   
 }
 

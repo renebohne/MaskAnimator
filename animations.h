@@ -106,49 +106,4 @@ const uint8_t FRAME_DISGUST0[] PROGMEM =
 };
 
 
-//// SURPRISE /////////////////////////////////////////////////////////////////////////////////////////////////////
-// five vertical lines
-// line1: 3, 7
-// line2: 1,2,5,8
-// line3: 9-14
-// line4: 15,16,19,22
-// line5: 17,21
-
-
-const uint8_t FRAME_SURPRISE0[] PROGMEM = 
-{
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
-};
-
-
-const uint8_t FRAME_SURPRISE1[] PROGMEM = 
-{
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
-};
-
-
-
-const uint8_t FRAME_SURPRISE2[] PROGMEM = 
-{
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
-};
-
-
-
-const uint8_t FRAME_SURPRISE3[] PROGMEM = 
-{
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, RESERVED,RESERVED,RESERVED, RESERVED,RESERVED,RESERVED,
-  0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
-};
-
-
-
-
 
