@@ -17,17 +17,15 @@ Adafruit_NeoPixel stripRight = Adafruit_NeoPixel(N_LEDS, PIN_RIGHT, NEO_GRB + NE
 void setup() {
   Serial.begin(9600);
   #ifdef DEBUG_SINGLESTRIP
-  Serial.println("Singlestrip DEBUG mode");
+  Serial.println("Singlestrip DEBUG mode - not for mask. See config.h");
   #else
-  Serial.println("Normal mode");
+  Serial.println("Normal mode - for mask");
   #endif
   
   stripLeft.begin();
-  stripLeft.show();
   stripMiddle.begin();
-  stripMiddle.show();
   stripRight.begin();
-  stripRight.show();
+  show();
 }
 
 void loop() {
@@ -119,10 +117,7 @@ void surprise()
     idx3 = idx3 % 5;
     idx4 = idx4 % 5;
 
-    stripLeft.show();
-    stripMiddle.show();
-    stripRight.show();
-
+    show();
     delay(speeddelay);
     speeddelay -= 4;
   }
@@ -131,9 +126,19 @@ void surprise()
 
 void happiness()
 {
-  //sun
-  setPixelColor(12, colors[idx2]);
-  sad
+  for (int i = 0; i<9;i++){
+    showFrame(FRAME_HAPPY1);
+    delay(300);
+    showFrame(FRAME_HAPPY2);
+    delay(300);
+    showFrame(FRAME_HAPPY3);
+    delay(300);
+    showFrame(FRAME_HAPPY4);
+    delay(300);
+    showFrame(FRAME_HAPPY5);
+    delay(300);
+  }
+
 }
 
 void sad()
@@ -170,10 +175,7 @@ void shy()
      setPixelColor(21, i,0,0);
      delay(5);
      
-    stripLeft.show();
-    stripMiddle.show();
-    stripRight.show();
-
+     show();
      
   }
   delay(227300);
@@ -255,9 +257,14 @@ void showFrame(const uint8_t frame[])
   }
   
   #endif
+  show();
+}
 
-  stripLeft.show();
-  stripMiddle.show();
-  stripRight.show();
+void show()
+{
+    stripLeft.show();
+    stripMiddle.show();
+    stripRight.show();
+
 }
 
